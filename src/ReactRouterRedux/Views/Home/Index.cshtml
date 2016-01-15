@@ -1,0 +1,10 @@
+﻿@model ReactRouterRedux.Models.InitialState
+
+@Html.React("Components.App", Model, null, "app")
+
+@section InitialState
+{
+    <script type="text/javascript">
+        window.__state__ = @Html.Raw(Json.Encode(Model));        
+    </script>
+}
