@@ -11,8 +11,8 @@ class App extends Component {
   }
 
   render() {
-    var reducer = combineReducers(reducers);
-    var store = createStore(reducer, this.props);
+    let reducer = combineReducers(reducers);
+    let store = createStore(reducer, this.props);
     var component;
 
     match({ routes, location: this.props.location }, function (error, redirectLocation, renderProps) {
