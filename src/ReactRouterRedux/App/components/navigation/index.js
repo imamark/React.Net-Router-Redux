@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { IndexLink, Link } from 'react-router';
 
-class Navigation extends Component {
-  constructor(props, context) {
-    super(props, context);
+export default class Navigation extends Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -25,5 +25,3 @@ class Navigation extends Component {
     )
   }
 }
-
-export default Navigation;

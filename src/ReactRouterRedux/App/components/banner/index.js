@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 
-class Banner extends Component {
-  constructor(props, context) {
-    super(props, context);
+export default class Banner extends Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -16,5 +16,3 @@ class Banner extends Component {
     )
   }
 }
-
-export default Banner;

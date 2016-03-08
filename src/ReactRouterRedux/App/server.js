@@ -1,1 +1,1 @@
-require('expose?Components!./views/App');
+require('expose?Components!./containers/app');

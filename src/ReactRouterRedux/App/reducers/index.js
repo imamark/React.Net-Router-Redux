@@ -1,5 +1,5 @@
-import MetaData from './MetaData';
+import metaData from './metaData';
 
 module.exports = {
-  MetaData
+  metaData
 };

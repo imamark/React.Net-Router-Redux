@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component, PropTypes } from 'react';
 
-class Contact extends Component {
-  constructor(props, context) {
-    super(props, context);
+export default class Contact extends Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
-    const { metaData: { Title, Description } } = this.props;
+    const { title, description } = this.props;
 
     return (
       <div>
-        <h2>{Title}</h2>
-        <h3>{Description}</h3>
+        <h2>{title}</h2>
+        <h3>{description}</h3>
 
         <address>
             One Microsoft Way<br />
@@ -30,10 +29,7 @@ class Contact extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    metaData: state.MetaData
-  };
+Contact.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 }
-
-export default connect(mapStateToProps)(Contact);

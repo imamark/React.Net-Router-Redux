@@ -13,7 +13,8 @@ namespace ReactRouterRedux.Controllers
         {
             var model = new InitialState
             {
-                MetaData = new MetaData {
+                MetaData = new MetaData
+                {
                     Title = "Home",
                     Description = "Home page description."
                 }
@@ -38,7 +39,8 @@ namespace ReactRouterRedux.Controllers
         {
             var model = new InitialState
             {
-                MetaData = new MetaData { 
+                MetaData = new MetaData
+                { 
                     Title = "Contact",
                     Description = "Your contact page."
                 }

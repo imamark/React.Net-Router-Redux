@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component, PropTypes } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import Banner from '../components/banner';
+import Banner from '../banner';
 
-class Home extends Component {
-  constructor(props, context) {
-    super(props, context);
+export default class Home extends Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -37,9 +36,3 @@ class Home extends Component {
     )
   }
 }
-
-function mapStateToProps(state) {
-  return {};
-}
-
-export default connect(mapStateToProps)(Home);

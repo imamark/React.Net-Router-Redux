@@ -6,12 +6,16 @@ import routes from '../routes';
 import { match, RoutingContext } from 'react-router';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     var reducer = combineReducers(reducers);
     var store = createStore(reducer, this.props);
     var component;
 
-    match({ routes, location: this.props.Location }, function (error, redirectLocation, renderProps) {
+    match({ routes, location: this.props.location }, function (error, redirectLocation, renderProps) {
       if (error) {
         component = <p>{error.message}</p>;
       } else if (renderProps) {
@@ -29,4 +33,6 @@ class App extends Component {
   }
 }
 
-export { App }
+export {
+  App
+}

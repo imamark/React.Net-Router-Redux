@@ -1,10 +1,17 @@
-﻿@model ReactRouterRedux.Models.InitialState
+﻿@using Newtonsoft.Json
+@model ReactRouterRedux.Models.InitialState
 
 @Html.React("Components.App", Model, null, "app")
 
 @section InitialState
 {
+    @{
+        Model.Location = null;
+    }
     <script type="text/javascript">
-        window.__state__ = @Html.Raw(Json.Encode(Model));        
+        window.__state__ = @Html.Raw(JsonConvert.SerializeObject(Model, new JsonSerializerSettings
+                           {
+                               NullValueHandling = NullValueHandling.Ignore
+                           }));
     </script>
 }

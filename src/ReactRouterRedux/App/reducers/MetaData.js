@@ -3,6 +3,6 @@ const initialState = {
 
 };
 
-export default function MetaData(state = initialState, action = null) {
+export default function metaData(state = initialState, action = null) {
   return state;
 }

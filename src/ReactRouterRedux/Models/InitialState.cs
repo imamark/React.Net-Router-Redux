@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace ReactRouterRedux.Models
 {
     public class InitialState
     {
-        [ScriptIgnore]
-        public string Location { get; set; }  
+        [JsonProperty("location")]
+        public string Location { get; set; }
+
+        [JsonProperty("metaData")]
         public MetaData MetaData { get; set; }      
 
         public InitialState()
@@ -21,7 +24,9 @@ namespace ReactRouterRedux.Models
 
     public class MetaData
     {
+        [JsonProperty("title")]
         public string Title { get; set; }
+        [JsonProperty("description")]
         public string Description { get; set; }
     }
 }
